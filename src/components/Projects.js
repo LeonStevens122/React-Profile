@@ -4,12 +4,6 @@ import React from 'react';
 
 
 
-
-
-// Import styling SCSS File
-
-
-
 // Create Projects object, NEXT routes as a page
 const Projects = (props) => {
   return (
@@ -30,7 +24,7 @@ const Projects = (props) => {
           >
             <img
                 className="portfolio-image"
-                          src="https://raw.githubusercontent.com/LeonStevens122/React-Weather-App/master/public/screenshot.jpg"
+                          src="https://github.com/LeonStevens122/React-Profile/blob/master/public/craigsList.jpg?raw=true"
                 alt="Django Craigslist Viewer"
             />
           </a>
@@ -83,7 +77,7 @@ const Projects = (props) => {
           >
             <img
               className="portfolio-image"
-              src="https://screenshot.codepen.io/1691929.oqRNGq.73d037dd-dab9-41f1-b97f-de1ead6971b9.png"
+                          src=" https://assets.codepen.io/1691929/internal/screenshots/pens/oqRNGq.default.png?format=auto&height=720&quality=75&v=1&version=1523994210&width=1280"
               alt="Wikipedia Viewer"
             />
           </a>
