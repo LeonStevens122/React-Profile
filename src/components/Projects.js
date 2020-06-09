@@ -59,7 +59,7 @@ const Projects = (props) => {
 
         <div className="grid-item">
           <a
-            href="https://git.heroku.com/secret-island-56752.git"
+            href="https://secret-island-56752.herokuapp.com/"
             alt="Tetris Game using React & TypeScript"
           >
             <img
