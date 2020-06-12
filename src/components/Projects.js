@@ -60,7 +60,7 @@ class Projects extends React.Component
     render() {
         return (
             <div >
-                <h2 >PROJECTS</h2>
+                <h2 >PORTFOLIO</h2>
                 <Row>
 
             {/* loop through list of projects to create cards */}
