@@ -1,103 +1,88 @@
-// pages/profile.js
-// import Layout & Link
+
 import React from 'react';
+import {
+    Card,
+    Row,
+    Col,
+    Icon,
+    CardTitle } from 'react-materialize';
+
+
+function projectObject(title, description, link, image ) {
+    this.title = title;
+    this.description = description;
+    this.link = link;
+    this.image = image;
+}
 
 
 
-// Create Projects object, NEXT routes as a page
-const Projects = (props) => {
-  return (
-      <>
-          <div>
-              <h1>PROJECTS</h1>
-              
-              <br />
-          </div>
-          
-         
-          <div className="grid-container">
-              
-        <div className="grid-item">
-          <a
-            href="https://sleepy-hamlet-64046.herokuapp.com/"
-            alt="Django Craigslist Viewer"
-          >
-            <img
-                className="portfolio-image"
-                          src="https://github.com/LeonStevens122/React-Profile/blob/master/public/craigsList.jpg?raw=true"
-                alt="Django Craigslist Viewer"
-            />
-          </a>
-              </div>
-             
-     
+let Project1 = new projectObject("Django Craigslist Viewer",
+    "CraigsList Viewer - Built using Python, Django & Materialize",
+    "https://sleepy-hamlet-64046.herokuapp.com/",
+    "https://github.com/LeonStevens122/React-Profile/blob/master/public/craigsList.jpg?raw=true");
 
-        <div className="grid-item">
-          <a
-            href="https://github.com/LeonStevens122/HyperionDev-Full-Stack-WebDev-Bootcamp.git"
-            alt="Online store"
-          >
-            <img
-              className="portfolio-image"
-              src="https://raw.githubusercontent.com/LeonStevens122/Personal-Website/master/data/webstore.jpg"
-              alt="Web Store"
-            />
-          </a>
-        </div>
 
-        <div className="grid-item">
-          <a
-            href="https://github.com/LeonStevens122/React-Weather-App.git"
-            alt="React Weather App"
-          >
-            <img
-              className="portfolio-image"
-              src="https://raw.githubusercontent.com/LeonStevens122/React-Weather-App/master/public/screenshot.jpg"
-            />
-          </a>
-        </div>
+let Project2 = new projectObject("Webstore built with HTML, CSS & JS",
+    "Webstore Built using vanilla JavaScript, with some animations",
+    "https://github.com/LeonStevens122/HyperionDev-Full-Stack-WebDev-Bootcamp.git",
+    "https://raw.githubusercontent.com/LeonStevens122/Personal-Website/master/data/webstore.jpg");
 
-        <div className="grid-item">
-          <a
-            href="https://secret-island-56752.herokuapp.com/"
-            alt="Tetris Game using React & TypeScript"
-          >
-            <img
-              className="portfolio-image"
-              src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Emacs_Tetris_vector_based_detail.svg"
-              alt="Tetris image"
-            />
-          </a>
-        </div>
 
-        <div className="grid-item">
-          <a
-            href="https://codepen.io/LeonStevens122/pen/oqRNGq"
-            alt="Wikipedia Viewer"
-          >
-            <img
-              className="portfolio-image"
-                          src=" https://assets.codepen.io/1691929/internal/screenshots/pens/oqRNGq.default.png?format=auto&height=720&quality=75&v=1&version=1523994210&width=1280"
-              alt="Wikipedia Viewer"
-            />
-          </a>
-              </div>
+let Project3 = new projectObject("React Weather App",
+    "Weather App, built using React.JS",
+    "https://github.com/LeonStevens122/React-Weather-App.git",
+    "https://raw.githubusercontent.com/LeonStevens122/React-Weather-App/master/public/screenshot.jpg");
 
-              <div className="grid-item">
-                  <a
-                      href="https://itunes-api-task21.herokuapp.com/"
-                      alt="iTunes API "
-                  >
-                      <img
-                          className="portfolio-image"
-                          src=" https://assets.codepen.io/1691929/internal/screenshots/pens/oqRNGq.default.png?format=auto&height=720&quality=75&v=1&version=1523994210&width=1280"
-                          alt="Wikipedia Viewer"
-                      />
-                  </a>
-              </div>
-      </div>
-   </>
-  );
-};
 
+let Project4 = new projectObject("Tetris Game using React & TypeScript",
+    "Tetris Game - built using React & TypeScript",
+    "https://secret-island-56752.herokuapp.com/",
+    "https://upload.wikimedia.org/wikipedia/commons/7/7c/Emacs_Tetris_vector_based_detail.svg");
+
+
+let Project5 = new projectObject("Wikipedia Viewer",
+    "Wikipedia Viewer",
+    "https://codepen.io/LeonStevens122/pen/oqRNGq",
+    "https://assets.codepen.io/1691929/internal/screenshots/pens/oqRNGq.default.png?format=auto&height=720&quality=75&v=1&version=1523994210&width=1280");
+
+
+let Project6 = new projectObject("iTunes Search App",
+    "iTunes Search App - Built with React",
+    "https://itunes-api-task21.herokuapp.com/",
+    "https://store-images.s-microsoft.com/image/apps.17190.14127333176902609.89767926-caf9-4d6c-b8d6-1b7212c2aa8a.d65253a8-93d9-4f23-90ce-72103b1af6ea?mode=scale&q=90&h=1080&w=1920");
+
+let projectList = [Project1, Project2, Project3, Project4, Project5, Project6]
+
+class Projects extends React.Component
+
+{
+    render() {
+        return (
+            <div >
+                <h2 >PROJECTS</h2>
+                <Row>
+
+            {/* loop through list of projects to create cards */}
+                    
+                {projectList.map((currentProject, index) => {
+                              
+                        return (
+                            <Col m={3} s={6} >
+                            <Card className="projectStyle"
+                                actions={[
+                                    <a key="1" href={currentProject.link}>{currentProject.title}</a>
+                                ]}
+                                closeIcon={<Icon>close</Icon>}
+                                header={<CardTitle image={currentProject.image}></CardTitle>}
+                                    revealIcon={<Icon>more_vert</Icon>}
+                                >{currentProject.description}</Card>
+                            </Col> )
+                            })}
+                </Row>
+            </div>
+        )
+    }
+}
 export default Projects;
+

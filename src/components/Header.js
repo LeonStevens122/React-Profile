@@ -12,19 +12,19 @@ import ReactDOM from 'react-dom';
 
 function Header() {
     return (
-        <div class="navbar-fixed">
+        <div className="navbar-fixed">
             <nav>
-                <div class="nav-wrapper blue lighten-3">
-                    <a href="#!" class="brand-logo blue lighten-3">Leon Stevens Profile</a>
-                    <ul class="right">
-                        <li class="active">
+                <div className="nav-wrapper  purple darken-4">
+                    <a href="#!" className="brand-logo  purple darken-4">   Leon Stevens Profile</a>
+                    <ul className="right">
+                        <li className="active">
                             <Link to="/">Home</Link>
                         </li>
                         
-                        <li class="active">
+                        <li className="active">
                             <Link to="/Projects">Projects</Link>
                         </li>
-                        <li class="active">
+                        <li className="active">
                             <Link to="/Contact">Contact</Link>
                         </li>
                     </ul>
