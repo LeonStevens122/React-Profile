@@ -9,7 +9,7 @@ const About = () => {
       <div>
           <div className="row">
               <br/>
-              <p className="about-parr abt-column"> Full Stack Web Developer, HTML - CSS - JS - REACT - Epxress - Node - Python - Django </p>
+              <p className="about-parr abt-column"> Full Stack Web Developer(MERN), HTML - CSS - JS - REACT - Express - Node - Python - Django </p>
           </div>
               <Row>
               <Col m={2} s={3}>
@@ -21,11 +21,10 @@ const About = () => {
                   />        </Col>  
               <Col m={10} s={8}>
                       <p className="descriptionPar">
-                          Full Stack web developer with extensive experience in supply chain
-                          and manufacturing, and taking the years of experience in meetign
-                          deadlines, finidng solutions, solving problems and just plain
-                          getting things done. And taking the same drive and passion into an
-            exciting new Tech career{" "}
+                      Full Stack web developer with extensive experience in supply chain
+                      and manufacturing, and taking the years of experience in meeting
+                      deadlines, finding solutions, solving problems and just plain
+                      getting things done. And taking the same drive and passion into an          exciting new Tech career{" "}
                       </p>
                   </Col>
                   </Row>
