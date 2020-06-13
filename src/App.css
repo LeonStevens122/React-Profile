@@ -7,6 +7,10 @@ html, body {
     height: 100%;
 }
 
+.contacts {
+    margin-top: 5%;
+    margin-left: 10%;
+}
 
 body {
     background-color: black;

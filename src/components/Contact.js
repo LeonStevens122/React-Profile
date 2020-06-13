@@ -4,7 +4,7 @@ import React from 'react';
 const Contact = props => {
 
     return (
-        <div className="main-app">
+        <div className="main-app contacts">
 
             <h1 className="contactHeader" > Contact  </h1>
             <h3> Cell Number : 079 490 8518 </h3>
